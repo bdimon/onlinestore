@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { moveIn, fallIn } from '../router.animations';
+// import { moveIn, fallIn } from '../router.animations';
 
 @Component({
   selector: 'aboutus',
   templateUrl: './aboutus.component.html',
-  styleUrls: ['./aboutus.component.css'],
-  animations: [moveIn(), fallIn()],
-  host:{'[@moveIn]': ''}
+  styleUrls: ['./aboutus.component.css']
 })
 export class AboutusComponent implements OnInit {
 state: String = '';
