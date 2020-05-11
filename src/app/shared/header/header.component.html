@@ -1,5 +1,5 @@
 <mat-toolbar>
-    <button mat-mini-fab color="warn">
+    <button mat-mini-fab color="warn" [matMenuTriggerFor]="navMenu">
         <mat-icon>dashboard</mat-icon>
     </button>
     <span class="example-icon"></span>
@@ -7,7 +7,9 @@
     <span class="example-icon"></span>
         {{pageTitle}}
     <span class="example-spacer"></span>
-        <mat-icon [matMenuTriggerFor]="helpMenu">help_outline</mat-icon>
+    <button mat-mini-fab color="primary" [matMenuTriggerFor]="helpMenu">
+        <mat-icon >help_outline</mat-icon>
+    </button>
     <span class="example-icon"></span>
         <mat-icon>settings</mat-icon>
     <!-- <span class="example-spacer"></span> -->
@@ -19,6 +21,9 @@
             This help page for About us.
         </div>
         {{helpTitle}}
+    </mat-menu>
+    <mat-menu #navMenu="matMenu" >
+        Navigation links
     </mat-menu>
        
 
