@@ -1,1 +1,25 @@
-<mat-toolbar>{{pageTitle}}</mat-toolbar>
+<mat-toolbar>
+    <button mat-mini-fab color="warn">
+        <mat-icon>dashboard</mat-icon>
+    </button>
+    <span class="example-icon"></span>
+        <mat-icon>{{iconTitle}}</mat-icon>
+    <span class="example-icon"></span>
+        {{pageTitle}}
+    <span class="example-spacer"></span>
+        <mat-icon [matMenuTriggerFor]="helpMenu">help-outline</mat-icon>
+    <span class="example-spacer"></span>
+        <mat-icon>settings</mat-icon>
+    <span class="example-spacer"></span>
+    <mat-menu #helpMenu="matMenu" >
+        <div *ngIF="helpTitle=='settingshelp'">
+            This help page for Settings.
+        </div>
+        <div *ngIF="helpTitle=='aboutushelp'">
+            This help page for About us.
+        </div>
+        {{helpTitle}}
+    </mat-menu>
+       
+
+</mat-toolbar>
