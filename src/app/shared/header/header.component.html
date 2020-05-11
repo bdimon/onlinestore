@@ -8,14 +8,14 @@
         {{pageTitle}}
     <span class="example-spacer"></span>
         <mat-icon [matMenuTriggerFor]="helpMenu">help_outline</mat-icon>
-    <span class="example-spacer"></span>
+    <span class="example-icon"></span>
         <mat-icon>settings</mat-icon>
-    <span class="example-spacer"></span>
+    <!-- <span class="example-spacer"></span> -->
     <mat-menu #helpMenu="matMenu" >
-        <div *ngIF="helpTitle=='settingshelp'">
+        <div *ngIf="helpTitle=='settingshelp'">
             This help page for Settings.
         </div>
-        <div *ngIF="helpTitle=='aboutushelp'">
+        <div *ngIf="helpTitle=='aboutushelp'">
             This help page for About us.
         </div>
         {{helpTitle}}
